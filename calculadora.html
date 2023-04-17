@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            background-image: linear-gradient(to right bottom ,rgb(41, 41, 41),rgb(0, 0, 0),rgb(41, 41, 41),rgb(0, 0, 0));
+
+        }
+
+        input{
+            color: aliceblue;
+            padding: 17px;
+            outline: none;
+            font-size: 30px;
+            border-radius: 25%;
+        }
+
+        .num{
+            width: 64px;
+            height:67px ;
+            margin: 5px;
+            box-shadow: 1px 2px white;
+            cursor: pointer;
+            background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.342), rgba(255, 255, 255, 0.062),rgba(255, 255, 255, 0.274), rgba(255, 255, 255, 0.096),rgba(255, 255, 255, 0.329));
+        }
+
+        .text{
+            width: 160px;
+            height: 26px;
+            border-radius: 10%;
+            letter-spacing: 5px;
+            text-align: center;
+            margin: 12px 5px 20px 5px;
+            
+            
+        }
+
+        .text1{
+            width: 24px;
+            height: 26px;
+            border-radius: 25%;
+            letter-spacing: 5px;
+            text-align: center;
+            margin-bottom: 12px;
+            cursor: pointer;
+        }
+
+        .main{
+            display: inline-block;
+            border: 1px solid white;
+            padding: 2%;
+            border-radius: 5%;
+            box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.26);
+            background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.521), rgba(255, 255, 255, 0.062),rgba(255, 255, 255, 0.274), rgba(255, 255, 255, 0.096),rgba(255, 255, 255, 0.329));
+        }
+
+        .maincolor{
+            background-color: black;
+            border: 1px solid white;
+        }
+
+        .blue{
+            background-color: #0cd0cd;
+        }
+
+        .pin{
+            background-color: #cf1596;
+        }
+
+        .gre{
+            background-color: #aad800;
+        }
+
+        .pur{
+            background-color: #8c52ff;
+        }
+
+        .ora{
+            background-color: #fcb707;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+       <form action="" name="Calculator">
+            <input type="text" class="text maincolor" name="text1" disabled>
+            <input type="text" class="text1 maincolor" name="text12" value="C" onclick="location.reload()"><br>
+
+            <input type="button" class="num maincolor" name="btn9" value="9" onclick="displaynum(btn9.value)">
+            <input type="button" class="num maincolor" name="btn8" value="8" onclick="displaynum(btn8.value)">
+            <input type="button" class="num maincolor" name="btn7" value="7" onclick="displaynum(btn7.value)">
+            <input type="button" class="num blue" name="addbtn" value="+" onclick="displaynum(addbtn.value)"><br>
+            
+            <input type="button" class="num maincolor" name="btn6" value="6" onclick="displaynum(btn6.value)">
+            <input type="button" class="num maincolor" name="btn5" value="5" onclick="displaynum(btn5.value)">
+            <input type="button" class="num maincolor" name="btn4" value="4" onclick="displaynum(btn4.value)">
+            <input type="button" class="num pin" name="subbtn" value="-" onclick="displaynum(subbtn.value)"><br>
+
+            <input type="button" class="num maincolor" name="btn3" value="3" onclick="displaynum(btn3.value)">
+            <input type="button" class="num maincolor" name="btn2" value="2" onclick="displaynum(btn2.value)">
+            <input type="button" class="num maincolor" name="btn1" value="1" onclick="displaynum(btn1.value)">
+            <input type="button" class="num gre" name="multbtn" value="*" onclick="displaynum(multbtn.value)"><br>
+
+            <input type="button" class="num maincolor" name="dot" value="." onclick="displaynum(dot.value)">
+            <input type="button" class="num maincolor" name="btn0" value="0" onclick="displaynum(btn0.value)">
+            <input type="button" class="num pur" name="eqlbtn" value="=" onclick="text1.value=eval(text1.value)">
+            <input type="button" class="num ora" name="divbtn" value="/" onclick="displaynum(divbtn.value)"><br>
+            
+       </form>  
+    </div>
+
+    <script>
+        function displaynum(n1){
+            Calculator.text1.value=Calculator.text1.value+n1;
+        }
+    </script>
+</body>
+</html>
